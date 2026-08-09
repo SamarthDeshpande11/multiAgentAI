@@ -19,13 +19,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 
+
+
+
+export const auth = getAuth(app);
+export const googleProvider = new GoogleAuthProvider();
+
+
+
 console.log("=== FIREBASE DEBUG ===");
 console.log("projectId:", auth.app.options.projectId);
 console.log("authDomain:", auth.app.options.authDomain);
 console.log("appId:", auth.app.options.appId);
 console.log("browserOrigin:", window.location.origin);
 console.log("browserHref:", window.location.href);
-
-
-export const auth = getAuth(app);
-export const googleProvider = new GoogleAuthProvider();
